@@ -14,12 +14,10 @@ public class Frontend extends HttpServlet{
     private String login = "";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Map<String, Object> map = new HashMap<>();
-        map.put("param", req.getParameterMap().toString());
+        Map<String, Object> map  = new HashMap<>();
+        resp.getWriter().println(req.getParameter("key"));
 
-        resp.getWriter().println(PageGenerator.getInstance().getPage("page.html",map));
-        resp.setContentType("text/html;charset=utf-8");
-        resp.setStatus(HttpServletResponse.SC_OK);
+
     }
 
     @Override
