@@ -34,3 +34,4 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 .idea/
 
+/src/main/java/com/soul/TestClass.java
